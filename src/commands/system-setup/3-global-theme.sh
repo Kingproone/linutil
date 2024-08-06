@@ -29,7 +29,7 @@ install_theme_tools() {
             sudo dnf install -y qt6ct kvantum
             ;;
         pacman)
-            sudo pacman -Sy
+            sudo pacman -Syu
             sudo pacman --noconfirm -S qt6ct kvantum
             ;;
         *)
