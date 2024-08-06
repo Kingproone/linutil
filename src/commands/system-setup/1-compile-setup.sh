@@ -33,7 +33,7 @@ installDepend() {
             if ! grep -q "^\s*\[multilib\]" /etc/pacman.conf; then
                 echo "[multilib]" | sudo tee -a /etc/pacman.conf
                 echo "Include = /etc/pacman.d/mirrorlist" | sudo tee -a /etc/pacman.conf
-                sudo "$PACKAGER" -Sy
+                sudo "$PACKAGER" -Syu
             else
                 echo "Multilib is already enabled."
             fi
